@@ -1,0 +1,5 @@
+{
+  "installCommand": "echo Skipping Node installation",
+  "buildCommand": "bash vercel-build.sh",
+  "outputDirectory": "build/web"
+}

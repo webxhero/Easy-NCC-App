@@ -8,12 +8,15 @@ class AppConfig {
 
   static bool supabaseInitialized = false;
 
-  // Supabase Dashboard -> Project Settings -> API -> Project URL
-  static const String supabaseUrl = 'https://djyktlocjmwxmpvylslf.supabase.co';
+  static const supabaseUrl = String.fromEnvironment(
+    'SUPABASE_URL',
+    defaultValue: 'https://djyktlocjmwxmpvylslf.supabase.co',
+  );
 
-  // Supabase Dashboard -> Project Settings -> API Keys -> Publishable key
-  static const String supabasePublishableKey =
-      'sb_publishable_ObrmthvU8sQwFWp1uBzvlA_jbXTKJZ_';
+  static const supabasePublishableKey = String.fromEnvironment(
+    'SUPABASE_PUBLISHABLE_KEY',
+    defaultValue: 'sb_publishable_ObrmthvU8sQwFWp1uBzvlA_jbXTKJZ_',
+  );
 
   static bool get isSupabaseConfigured =>
       supabaseUrl.startsWith('https://') &&
